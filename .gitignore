@@ -83,3 +83,14 @@ src/PlatformService/obj/Debug/net7.0/refint/PlatformService.dll
 src/PlatformService/obj/Debug/net7.0/staticwebassets/msbuild.build.PlatformService.props
 src/PlatformService/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.PlatformService.props
 src/PlatformService/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.PlatformService.props
+src/PlatformService/PlatformService.csproj.user
+src/PlatformService/.vs/PlatformService/config/applicationhost.config
+src/PlatformService/.vs/PlatformService/DesignTimeBuild/.dtbcache.v2
+src/PlatformService/.vs/PlatformService/FileContentIndex/3b30be58-06c3-4d69-9b72-891639070c65.vsidx
+src/PlatformService/.vs/PlatformService/FileContentIndex/126c8604-7bea-4b84-a856-17aa6ec6094f.vsidx
+src/PlatformService/.vs/PlatformService/FileContentIndex/read.lock
+src/PlatformService/.vs/PlatformService/v17/.futdcache.v2
+src/PlatformService/.vs/PlatformService/v17/.suo
+src/PlatformService/.vs/ProjectEvaluation/platformservice.metadata.v6.1
+src/PlatformService/.vs/ProjectEvaluation/platformservice.projects.v6.1
+src/PlatformService/obj/Debug/net7.0/PlatformService.csproj.BuildWithSkipAnalyzers
