@@ -27,6 +27,7 @@ namespace PlatformService.SyncDataServices.Http
             
             // var response = await _httpClient.PostAsync($"{_config["CommandService"]}", httpContent);
             //var response = await _httpClient.PostAsync("http://localhost:6000/api/c/Platforms", httpContent);
+            //"http://commands-clusterip-srv:80/api/c/platforms"
             var response = await _httpClient.PostAsync($"{_configuration["CommandService"]}", httpContent);
 
             if (response.IsSuccessStatusCode)
@@ -35,7 +36,10 @@ namespace PlatformService.SyncDataServices.Http
             }
             else
             {
-                Console.WriteLine("--> Sync POST to CommandService was NOT OK!");
+                Console.WriteLine(@$"
+                --> Sync POST to CommandService was NOT OK! 
+                 StatusCode:{response.StatusCode} 
+                 response.Content: {response.Content.ReadAsStringAsync()}");
             }
 
         }
