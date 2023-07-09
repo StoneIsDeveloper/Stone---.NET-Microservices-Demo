@@ -7,3 +7,19 @@
 - docker stop 6b3ed06a23c2
 - docker start  6b3ed06a23c2
 - docker push stone056/platformservice
+
+### K8s cmd
+>kubectl version
+
+- kubectl apply -f platforms-depl.yaml
+- kubectl apply -f paltforms-np-srv.yaml
+- kubectl apply -f commands-depl.yaml
+
+- kubectl get services
+- kubectl get deployments
+- kubectl get pods
+
+- kubectl delete deployment platforms-depl
+- kubectl delete services platforms-depl
+- kubectl rollout restart deployment platforms-depl
+
