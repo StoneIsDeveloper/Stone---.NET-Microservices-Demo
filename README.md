@@ -1,8 +1,8 @@
 # Stone---.NET-Microservices-Demo
 
-### Docker
-### K8S
-### net core 7
+1. Docker
+2. K8S
+3. net core 7
 
 ### Docker cmd
 - docker build -t stone056/platformservice .
