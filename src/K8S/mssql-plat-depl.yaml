@@ -28,12 +28,12 @@ spec:
                 name: mssql
                 key: SA_PASSWORD
           volumeMounts:
-          - mountPath: /var/opt/mssql/data
-            name: mssqldb
+            - mountPath: /var/opt/mssql
+              name: mssql-storage
       volumes:
-      - name: mssqldb
-        persistentVolumeClaim:
-          claimName: mssql-claim
+        - name: mssql-storage
+          persistentVolumeClaim:
+            claimName: mssql-claim
 ---
 apiVersion: v1
 kind: Service
