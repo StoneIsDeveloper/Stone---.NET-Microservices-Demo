@@ -11,6 +11,7 @@ namespace CommandsService
             
         }
         
+        //http://acme.com/api/c/platforms/
         [HttpPost]
         public ActionResult TestInboundConnection()
         {
