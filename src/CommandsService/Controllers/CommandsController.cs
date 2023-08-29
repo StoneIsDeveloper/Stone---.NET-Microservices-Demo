@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CommandsService.Controllers
 {
-    [Route("api/c/platforms/{paltformId}/[controller]")]
+    [Route("api/c/platforms/{platformId}/[controller]")]
     public class CommandsController : ControllerBase
     {
         private readonly ICommandRepo _repository;
@@ -17,11 +17,10 @@ namespace CommandsService.Controllers
             _repository = repo;
             _mapper = mapper;
         }
-
-        [HttpGet]
+         
         public ActionResult<IEnumerable<CommandReadDto>> GetCommandsForPlatform(int platformId)
         {
-            Console.WriteLine($"--> Hit GetCommandsForPlatform");
+            Console.WriteLine($"--> Hit GetCommandsForPlatform:" + platformId);
             if(!_repository.PlatformExists(platformId))
             {
                 return NotFound();
@@ -34,7 +33,7 @@ namespace CommandsService.Controllers
         [HttpGet("{commandId}",Name ="GetCommandForPlatform")]
         public ActionResult<CommandCreateDto> GetCommandForPlatform(int platformId, int commandId)
         {
-            Console.WriteLine($"--> Hit GetCommandForPlatform");
+            Console.WriteLine($"--> Hit GetCommandForPlatform:{platformId} / {commandId}");
 
             if(!_repository.PlatformExists(platformId))
             {
@@ -51,6 +50,7 @@ namespace CommandsService.Controllers
             return Ok(_mapper.Map<CommandReadDto>(command));
         }
 
+        [HttpPost]
         public ActionResult<CommandReadDto> CreateCommandForPlatform(int platformId, CommandCreateDto commandDto)
         {
             Console.WriteLine($"--> Hit CreateCommandForPlatform");
