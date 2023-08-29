@@ -53,11 +53,11 @@ namespace CommandsService.Controllers
         [HttpPost]
         public ActionResult<CommandReadDto> CreateCommandForPlatform(int platformId, CommandCreateDto commandDto)
         {
-            Console.WriteLine($"--> Hit CreateCommandForPlatform");
+            Console.WriteLine($"--> Hit CreateCommandForPlatform:{platformId}");
             
             if(!_repository.PlatformExists(platformId))
             {
-                return NotFound();
+                return NotFound();                
             }
 
             var command = _mapper.Map<Command>(commandDto);
