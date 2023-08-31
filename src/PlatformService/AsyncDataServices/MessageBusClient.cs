@@ -41,8 +41,6 @@ namespace PlatformService.AsyncDataServices
 
         }
 
-
-
         public void PublishNewPlatform(PlatformPublishedDto platformPublishedDto)
         {
             var message = JsonSerializer.Serialize(platformPublishedDto);

@@ -20,7 +20,7 @@ namespace CommandsService.Data
 
             foreach(var plat in platforms)
             {
-                if(!repo.ExternalPlatformExists(plat.ExternalId))
+                if(!repo.ExternalPlatformExists(plat.ExternalID))
                 {
                     repo.CreatePlatform(plat);
                 }
